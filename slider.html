@@ -5,202 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Slider</title>
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #111;
-            color: white;
-        }
-
-        .slider-container {
-            width: 100%;
-            max-width: 1200px;
-            height: 600px;
-            margin: 2rem auto;
-            position: relative;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-        }
-
-        .slide {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            transition: transform 0.5s ease;
-        }
-
-        .background-image {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.4);
-            z-index: -1;
-        }
-
-        .poster-container {
-            width: 25%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2rem;
-        }
-
-        .poster {
-            width: 100%;
-            max-width: 300px;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-            transition: transform 0.3s ease;
-        }
-
-        .poster:hover {
-            transform: scale(1.03);
-        }
-
-        .info-container {
-            width: 75%;
-            height: 100%;
-            padding: 3rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .movie-title {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-        }
-
-        .movie-meta {
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            color: #ddd;
-        }
-
-        .action-icons {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .icon {
-            font-size: 2.5rem;
-            cursor: pointer;
-            color: white;
-            transition: all 0.2s ease;
-        }
-
-        .icon:hover {
-            color: #f5a623;
-            transform: scale(1.1);
-        }
-
-        .synopsis {
-            line-height: 1.6;
-            max-width: 90%;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-        }
-
-        /* Navigation buttons */
-        .slider-nav {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 1rem;
-            transform: translateY(-50%);
-            z-index: 10;
-        }
-
-        .nav-btn {
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
-            border: none;
-            font-size: 2rem;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .nav-btn:hover {
-            background: rgba(245, 166, 35, 0.8);
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .slider-container {
-                height: 500px;
-            }
-            
-            .poster-container {
-                width: 30%;
-                padding: 1rem;
-            }
-            
-            .info-container {
-                width: 70%;
-                padding: 1.5rem;
-            }
-            
-            .movie-title {
-                font-size: 2rem;
-            }
-            
-            .icon {
-                font-size: 2rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .slider-container {
-                height: 400px;
-            }
-            
-            .slide {
-                flex-direction: column;
-            }
-            
-            .poster-container, .info-container {
-                width: 100%;
-                height: auto;
-            }
-            
-            .poster-container {
-                padding-top: 1rem;
-                justify-content: flex-start;
-            }
-            
-            .poster {
-                max-width: 150px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="slider.css">
 </head>
 <body>
     <div class="slider-container">
         <!-- Slide 1 -->
         <div class="slide" style="background-color: #1a1a2e;">
-            <img src="https://via.placeholder.com/1200x600/1a1a2e/ffffff?text=Background+1" alt="Movie Background" class="background-image">
+            <img src="img/Flow" alt="Movie Background" class="background-image">
             
             <div class="poster-container">
-                <img src="https://via.placeholder.com/300x450/4e4e50/ffffff?text=Poster+1" alt="Movie Poster" class="poster">
+                <img src="img/FlowPoster.webp" alt="Movie Poster" class="poster">
             </div>
             
             <div class="info-container">
@@ -214,22 +28,25 @@
                 </div>
                 
                 <p class="synopsis">
-                    En un mundo donde el agua es la fuente de toda magia, una joven descubre que tiene el poder de controlar el flujo de los ríos. Cuando su aldea es amenazada, deberá aprender a dominar sus habilidades para salvar a su gente.
+                    En un mundo al borde del colapso, un gato solitario pierde su hogar por una inundación y encuentra refugio en un barco con otras especies. Juntos, deberán superar diferencias y desafíos mientras navegan por un misterioso paisaje sumergido.
                 </p>
             </div>
         </div>
         
         <!-- Slide 2 -->
         <div class="slide" style="background-color: #16213e;">
-            <img src="https://via.placeholder.com/1200x600/16213e/ffffff?text=Background+2" alt="Movie Background" class="background-image">
+            <img src="img/robotSalvaje" alt="Movie Background" class="background-image">
             
             <div class="poster-container">
-                <img src="https://via.placeholder.com/300x450/4e4e50/ffffff?text=Poster+2" alt="Movie Poster" class="poster">
+                <img src="img/robotSalvaje.webp" alt="Movie Poster" class="poster">
             </div>
             
             <div class="info-container">
-                <h1 class="movie-title">Eclipse</h1>
-                <p class="movie-meta">B • 15/03/2025 (MX) • Ciencia Ficción, Drama • 2h 10m</p>
+                <h1 class="movie-title">Wild Robot</h1>
+                <p class="movie-meta">A
+                    26/09/2024 (MX)
+                    Animación, Ciencia ficción, Familia
+                    1h 41m</p>
                 
                 <div class="action-icons">
                     <span class="material-symbols-outlined icon">list</span>
@@ -238,11 +55,70 @@
                 </div>
                 
                 <p class="synopsis">
-                    Durante un eclipse solar global, un grupo de científicos descubre que el evento celestial ha alterado las leyes de la física. Mientras el mundo se sumerge en el caos, deben encontrar una solución antes de que los cambios sean permanentes.
+                    Un robot - ROZZUM unidad 7134, "Roz" para abreviar - naufraga en una isla deshabitada y debe aprender a adaptarse al duro entorno, estableciendo gradualmente relaciones con los animales de la isla y convirtiéndose en la madre adoptiva de un ganso huérfano.
                 </p>
             </div>
         </div>
-        
+        <div class="slide" style="background-color: #16213e;">
+            <img src="img/rushHour3" alt="Movie Background" class="background-image">
+            
+            <div class="poster-container">
+                <img src="img/rushHour3.webp" alt="Movie Poster" class="poster">
+            </div>
+            
+            <div class="info-container">
+                <h1 class="movie-title">Una pareja explosiva 3 (2007)</h1>
+                <p class="movie-meta">PG-13
+                    10/08/2007 (US)
+                    Acción, Comedia, Crimen
+                    1h 30m</p>
+                
+                <div class="action-icons">
+                    <span class="material-symbols-outlined icon">list</span>
+                    <span class="material-symbols-outlined icon">favorite</span>
+                    <span class="material-symbols-outlined icon">bookmark</span>
+                </div>
+                
+                <p class="synopsis">
+                    El corazón de París esconde un secreto mortal. Al otro lado del mundo, en Los Ángeles, el embajador
+                     Han está a punto de divulgar ese secreto. Tiene en su poder información sobre los mecanismos internos
+                      de las Tríadas, el sindicato del crimen más poderoso y más conocido del mundo. El embajador ha 
+                      descubierto la identidad de Shy Shen, elemento clave del vasto anillo del crimen, y está a punto 
+                      de revelarlo al Tribunal Penal Mundial, hasta que la bala de un asesino lo silencia para siempre.
+                       Las Tríadas harán cualquier cosa para asegurarse de que sus secretos permanezcan enterrados, y 
+                       solamente existe una esperanza para poder detenerlos… El detective Carter, del departamento de 
+                       policía de Los Ángeles, y el inspector chino Lee viajan a París para detener una conspiración 
+                       criminal a nivel global y para salvar la vida de un vieja amiga: la hija del embajador Han: Soo Yung.
+                </p>
+            </div>
+        </div>
+        <div class="slide" style="background-color: #16213e;">
+            <img src="img/venom" alt="Movie Background" class="background-image">
+            
+            <div class="poster-container">
+                <img src="img/Venom.webp" alt="Movie Poster" class="poster">
+            </div>
+            
+            <div class="info-container">
+                <h1 class="movie-title">Venom: El último baile (2024)
+                </h1>
+                <p class="movie-meta">
+                    B
+                    24/10/2024 (MX)
+                    Acción, Ciencia ficción, Aventura
+                    1h 49m</p>
+                
+                <div class="action-icons">
+                    <span class="material-symbols-outlined icon">list</span>
+                    <span class="material-symbols-outlined icon">favorite</span>
+                    <span class="material-symbols-outlined icon">bookmark</span>
+                </div>
+                
+                <p class="synopsis">
+                    Eddie y Venom están huyendo. Perseguidos por sus dos mundos, el dúo se ve obligado a tomar una decisión devastadora que bajará el telón en un último baile entre Venom y Eddie.
+                </p>
+            </div>
+        </div>
         <!-- Navigation buttons -->
         <div class="slider-nav">
             <button class="nav-btn" onclick="prevSlide()">❮</button>
